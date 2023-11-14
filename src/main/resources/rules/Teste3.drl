@@ -1,0 +1,14 @@
+package org.example.rules
+
+import org.example.service.MyService;
+
+rule "Teste3"
+when
+    $o : Number(intValue == 10)
+then
+    // Acesse o serviço e chame a função
+    MyService service = new MyService();
+    service.performAction(($o).intValue());
+    service.AAa();
+    System.out.println("50 has been register!");
+end
